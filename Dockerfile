@@ -9,9 +9,6 @@ COPY package.json package-lock.json* ./
 
 RUN npm ci --omit=dev
 
-# Fix permissions
-RUN chown -R app:app /app
-
 COPY . .
 
 USER node
